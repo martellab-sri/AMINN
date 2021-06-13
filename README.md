@@ -6,7 +6,7 @@ by Jianan Chen (chenjn2010@gmail.com), Helen M. C. Cheung, Laurent Milot and Ann
 ## Introduction
 AMINN refers to autoencoder-based multiple instance neural network that is deveopled to address multifocality, i.e. to incorporate features from all lesions for prediction/classification:
 * We jointly train an autoencoder to reconstruct input features and a multiple instance network to make predictionsby aggregating information from all tumour lesions of a patient
-* We incorporate a two-step normalization technique to improve the trainingof deep neural networks, built on the observation that the distributionsof radiomic features are almost always severely skewed.
+* We incorporate a two-step normalization technique to improve the training of deep neural networks, built on the observation that the distributions of radiomic features are almost always severely skewed.
 * Experimental results empirically validated our hypothesis that incorporating imaging features of all lesions improves outcome prediction for multifocal cancer.
 * Our code is written in Keras, using Tensorflow as backend. If using radiomic features as input, one run of training takes few minutes on a moderate GPU or CPU.
 
@@ -23,6 +23,7 @@ The paper has been early accepted by MICCAI 2021. For more details, please refer
 
 `dataset.py` and `utils.py`: Contains scripts that are used for creating datasets for AMINN from csv files (radimoics features + clinical variables).
 
+`data/input.csv`: This file is provided as an example of input data. We have modified the value of the radiomic features and survival outcomes so the file cannot be used for training (It will throw a 'Divided by zero' error). 
 ## Citing AMINN
 
 If you find AMINN useful in your research, please consider citing:
